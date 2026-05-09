@@ -1,0 +1,9 @@
+old_url,new_url,redirect_type,traffic_monthly,priority,notes
+# Mapa redirectów 1:1 — obecna cityroom.pl (WordPress) → nowa cityroom.pl (Astro)
+# Status: TODO przed cutover. Wypełnić na bazie audytu obecnej strony + GSC + GA4.
+# Format CSV: stare URL → nowy URL, typ redirectu (301 default), miesięczny ruch, priorytet, notatki
+#
+# PRZYKŁAD:
+# /jak-dzialamy/,/jak-dziala-cityroom/,301,711,P1,literówka w starym H1
+# /o-nas/,/o-nas/,301,679,P1,zachowujemy slug
+# /harmonogram-sprzatania/,/,410,0,P3,noindex w obecnym; gone after cutover

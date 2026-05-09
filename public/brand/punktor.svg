@@ -1,0 +1,10 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 247" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="cr-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2eb0e6"></stop>
+      <stop offset="100%" stop-color="#0773cb"></stop>
+    </linearGradient>
+  </defs>
+  <path d="M88 8 L332 8 Q340 8 340 16 L340 60 Q340 68 332 72 L252 239 Q248 247 240 247 L8 247 Q0 247 0 239 L0 195 Q0 187 8 183 L88 16 Q92 8 88 8 Z" fill="url(#cr-grad)"></path>
+</svg>

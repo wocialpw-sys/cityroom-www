@@ -1,0 +1,40 @@
+# Cityroom — robots.txt
+# Stage environment (melawini.pl) — disallow all crawlers
+# Production cutover: replace contents with whitelist below
+
+User-agent: *
+Disallow: /
+
+# ============================================================
+# PRODUCTION CONFIG (commented out — use after cutover)
+# ============================================================
+#
+# # AI bots — whitelisted (GEO/AEO strategy 2026)
+# User-agent: GPTBot
+# Allow: /
+#
+# User-agent: Google-Extended
+# Allow: /
+#
+# User-agent: ClaudeBot
+# Allow: /
+#
+# User-agent: PerplexityBot
+# Allow: /
+#
+# User-agent: CCBot
+# Allow: /
+#
+# User-agent: Applebot-Extended
+# Allow: /
+#
+# User-agent: bingbot
+# Allow: /
+#
+# # Default — search engines welcome
+# User-agent: *
+# Allow: /
+# Disallow: /api/
+# Disallow: /admin/
+#
+# Sitemap: https://cityroom.pl/sitemap-index.xml

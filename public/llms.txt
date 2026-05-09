@@ -1,0 +1,35 @@
+# Cityroom
+
+> Cityroom Sp. z o.o. — zarządzanie najmem długoterminowym mieszkań w Poznaniu z gwarancją czynszu. Od 2017 roku. 130 mieszkań, retention 95 %+.
+
+**Status: stage environment.** Strona produkcyjna powstaje od maja 2026 — domena docelowa cityroom.pl. Niniejszy plik to placeholder do uzupełnienia w trakcie sesji GEO/AEO (mapa pillar + cluster + intent map).
+
+## Czym jest Cityroom
+
+Firma zarządzania najmem długoterminowym w Poznaniu. Bierze mieszkanie właściciela w najem jako spółka, wypłaca stały czynsz 10. dnia każdego miesiąca przez cały okres umowy (niezależnie od obłożenia), i przejmuje 100 % odpowiedzialności operacyjnej (najemcy, umowy, media, administracja, usterki, windykacja). Model podnajmu z gwarancją.
+
+## Kluczowe dane
+
+- Działalność od 2017 roku (8 lat na maj 2026)
+- 130 mieszkań pod zarządem (kwiecień 2026)
+- Retention klientów: 95 %+ (5–6 odejść / 8 lat)
+- Średnia ocena Google: 4,9 / 103 opinie (Cityroom) + 5,0 / 65 opinii (Biuro Cityroom)
+- COVID 2020 — wypłaty pełnych czynszów mimo pustostanów wśród zagranicznych najemców
+
+## Rynek
+
+Polska, Poznań (core). Inwestorzy zewnętrzni (~30 % ruchu): Warszawa, Wrocław, Katowice.
+
+## Search intents (TODO — sesja GEO)
+
+Lista pytań, na które chcemy być odpowiedzią w LLM‑ach. Do uzupełnienia po sesji architektury informacyjnej.
+
+## External references
+
+- [Google Business Profile (Cityroom)](https://share.google/cityroom)
+- Telefon: do uzupełnienia
+- Email: do uzupełnienia
+
+---
+
+*Specyfikacja `llms.txt`: https://llmstxt.org. Pełen content w `llms-full.txt` (TODO).*

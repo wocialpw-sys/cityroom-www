@@ -1,0 +1,126 @@
+/* ============================================================
+   Cityroom — global stylesheet entry point.
+
+   Order matters:
+   1. tokens.css   — brand source of truth (CSS variables)
+   2. tailwindcss  — utilities, base reset
+   3. @theme       — bridges brand tokens to Tailwind class names
+                     (DO NOT hardcode hex/spacing in components —
+                      always use brand tokens or Tailwind classes
+                      that reference them)
+   ============================================================ */
+
+@import "./tokens.css";
+@import "tailwindcss";
+
+@theme {
+  /* ===== Colors — Cityroom blue gradient palette ============ */
+  --color-cr-blue-50:  var(--cr-blue-50);
+  --color-cr-blue-100: var(--cr-blue-100);
+  --color-cr-blue-200: var(--cr-blue-200);
+  --color-cr-blue-300: var(--cr-blue-300);
+  --color-cr-blue-400: var(--cr-blue-400);
+  --color-cr-blue-500: var(--cr-blue-500);
+  --color-cr-blue-600: var(--cr-blue-600);
+  --color-cr-blue-700: var(--cr-blue-700);
+  --color-cr-blue-800: var(--cr-blue-800);
+
+  /* ===== Neutrals (white-dominant brand) ==================== */
+  --color-cr-white:  #ffffff;
+  --color-cr-paper:  var(--cr-paper);
+  --color-cr-mist:   var(--cr-mist);
+  --color-cr-line:   var(--cr-line);
+  --color-cr-line-2: var(--cr-line-2);
+  --color-cr-ink:    var(--cr-ink);
+  --color-cr-ink-10: var(--cr-ink-10);
+  --color-cr-ink-30: var(--cr-ink-30);
+  --color-cr-ink-50: var(--cr-ink-50);
+
+  /* ===== Semantic foreground / background ================== */
+  --color-fg1: var(--cr-ink);
+  --color-fg2: var(--cr-ink-10);
+  --color-fg3: var(--cr-ink-30);
+  --color-fg4: var(--cr-ink-50);
+  --color-fg-accent: var(--cr-blue-600);
+
+  --color-bg1: #ffffff;
+  --color-bg2: var(--cr-paper);
+  --color-bg3: var(--cr-mist);
+  --color-bg-accent-soft: var(--cr-blue-50);
+
+  /* ===== Borders =========================================== */
+  --color-border:        var(--cr-line);
+  --color-border-strong: var(--cr-line-2);
+  --color-border-accent: var(--cr-blue-300);
+
+  /* ===== Typography families =============================== */
+  --font-display: 'Ibrand-PL', 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body:    'Manrope', 'Ibrand-PL', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ===== Type scale (semantic — use these, not raw px) ===== */
+  --text-display:  clamp(56px, 7vw, 96px);
+  --text-h1:       clamp(40px, 5vw, 64px);
+  --text-h2:       clamp(32px, 3.6vw, 44px);
+  --text-h3:       28px;
+  --text-h4:       22px;
+  --text-lead:     20px;
+  --text-body:     17px;
+  --text-small:    15px;
+  --text-caption:  13px;
+  --text-eyebrow:  12px;
+
+  /* ===== Radii ============================================= */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-2xl:  32px;
+  --radius-pill: 9999px;
+
+  /* ===== Shadows (soft, never heavy) ====================== */
+  --shadow-xs:   0 1px 2px rgba(10, 11, 13, 0.04);
+  --shadow-sm:   0 1px 2px rgba(10, 11, 13, 0.04), 0 2px 8px rgba(10, 11, 13, 0.04);
+  --shadow-md:   0 2px 4px rgba(10, 11, 13, 0.04), 0 8px 24px rgba(10, 11, 13, 0.06);
+  --shadow-lg:   0 4px 8px rgba(10, 11, 13, 0.05), 0 24px 60px rgba(10, 11, 13, 0.10);
+  --shadow-glow: 0 10px 40px rgba(21, 137, 212, 0.20);
+
+  /* ===== Motion =========================================== */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ===== Container max-widths ============================ */
+  --container-content: 640px;
+  --container-page:    1200px;
+}
+
+/* ----- Page defaults ---------------------------------------- */
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--cr-paper);
+  color: var(--cr-ink-10);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+/* Honor brand-provided semantic typography (h1-h4, .display, .eyebrow,
+   .lead, .text-gradient, .hr) defined in tokens.css. They use the same
+   variables, so styling stays in sync. */
+
+/* ----- Reduced motion --------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

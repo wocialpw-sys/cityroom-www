@@ -1,0 +1,315 @@
+/* ============================================================
+   Cityroom — Colors & Type foundations
+   Use these tokens for every Cityroom surface.
+   Philosophy: white-dominant, typography-led, blue accent used
+   sparingly (think: one important moment per view).
+   ============================================================ */
+
+/* ----- Fonts ------------------------------------------------ */
+/* Ibrand-PL is the brand display/body face. It's a humanist,
+   slightly geometric sans (see logo wordmark). Uses single-
+   story "a" in display weight. Supports Polish diacritics. */
+@font-face {
+  font-family: 'Ibrand-PL';
+  src: url('/fonts/Ibrand-PL.woff2') format('woff2'),
+       url('/fonts/Ibrand-PL.woff') format('woff'),
+       url('/fonts/Ibrand-PL.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Manrope is the text companion for UI and long body copy.
+   Ibrand-PL is a display-led face; Manrope handles everything
+   below ~18 px — warmer than Inter, excellent at small sizes,
+   full Polish diacritics coverage. Seven weights declared
+   against a single font-family so `font-weight` picks the
+   right file. */
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ===== Brand color — Cityroom blue gradient =============== */
+  /* Sampled directly from the Punktor (brand bullet). */
+  --cr-blue-50:  #eaf6fd;
+  --cr-blue-100: #cfeafa;
+  --cr-blue-200: #9ed5f4;
+  --cr-blue-300: #5fbcea;   /* mid accent, matches logo slash highlight */
+  --cr-blue-400: #2eb0e6;   /* gradient start */
+  --cr-blue-500: #1589d4;   /* gradient mid */
+  --cr-blue-600: #0773cb;   /* gradient end */
+  --cr-blue-700: #0861ad;
+  --cr-blue-800: #074f8a;
+
+  /* Signature gradient — use SPARINGLY: one element per view.
+     This is the brand's "punktor" (bullet) color, and appears
+     in the logo mark. Never as a full background. */
+  --cr-gradient:        linear-gradient(135deg, #2eb0e6 0%, #0773cb 100%);
+  --cr-gradient-soft:   linear-gradient(135deg, #eaf6fd 0%, #cfeafa 100%);
+  --cr-gradient-radial: radial-gradient(120% 100% at 0% 0%, #2eb0e6 0%, #0773cb 70%);
+
+  /* ===== Neutrals — near-white surfaces ==================== */
+  --cr-white:    #ffffff;
+  --cr-paper:    #fafafa;  /* default page background */
+  --cr-mist:     #f4f5f7;  /* subtle card/section fill */
+  --cr-line:     #e7e9ee;  /* hairline borders */
+  --cr-line-2:   #d7dae1;  /* stronger borders */
+  --cr-ink-50:   #9aa1ad;  /* tertiary text */
+  --cr-ink-30:   #6b7280;  /* secondary text */
+  --cr-ink-10:   #2a2d33;  /* body ink */
+  --cr-ink:      #0a0b0d;  /* display + logo black */
+
+  /* ===== Semantic foreground ============================== */
+  --fg1: var(--cr-ink);         /* headlines, logo */
+  --fg2: var(--cr-ink-10);      /* body */
+  --fg3: var(--cr-ink-30);      /* secondary / metadata */
+  --fg4: var(--cr-ink-50);      /* muted / placeholders */
+  --fg-inverse: var(--cr-white);
+  --fg-accent:  var(--cr-blue-600);
+
+  /* ===== Semantic background ============================= */
+  --bg1: var(--cr-white);       /* base */
+  --bg2: var(--cr-paper);       /* page default */
+  --bg3: var(--cr-mist);        /* cards / subtle fills */
+  --bg-accent-soft: var(--cr-blue-50);
+
+  /* ===== Borders ========================================= */
+  --border:        var(--cr-line);
+  --border-strong: var(--cr-line-2);
+  --border-accent: var(--cr-blue-300);
+
+  /* ===== Status (restrained — brand is trust, not alarm) == */
+  --ok:     #0f9d58;
+  --warn:   #b97a00;
+  --danger: #c0392b;
+  --info:   var(--cr-blue-600);
+
+  /* ===== Typography families ============================= */
+  --font-display: 'Ibrand-PL', 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body:    'Manrope', 'Ibrand-PL', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ===== Type scale — generous, editorial =============== */
+  /* Use these semantic tokens, not raw pixel values. */
+  --fs-display: clamp(56px, 7vw, 96px);
+  --fs-h1:      clamp(40px, 5vw, 64px);
+  --fs-h2:      clamp(32px, 3.6vw, 44px);
+  --fs-h3:      28px;
+  --fs-h4:      22px;
+  --fs-lead:    20px;      /* intro paragraph */
+  --fs-body:    17px;
+  --fs-small:   15px;
+  --fs-caption: 13px;
+  --fs-eyebrow: 12px;      /* uppercase label above a headline */
+
+  --lh-tight:   1.04;
+  --lh-snug:    1.2;
+  --lh-body:    1.55;
+  --lh-loose:   1.7;
+
+  --ls-tight:   -0.02em;   /* display */
+  --ls-snug:    -0.01em;   /* headings */
+  --ls-normal:  0;
+  --ls-wide:    0.08em;    /* eyebrow, buttons */
+  --ls-wider:   0.14em;    /* uppercase labels */
+
+  /* ===== Spacing ======================================== */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-8:  32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+  --s-32: 128px;
+
+  /* ===== Radii ========================================== */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+  --r-2xl: 32px;
+  --r-pill: 999px;
+
+  /* ===== Shadows — soft, never heavy =================== */
+  --shadow-xs: 0 1px 2px rgba(10, 11, 13, 0.04);
+  --shadow-sm: 0 1px 2px rgba(10, 11, 13, 0.04), 0 2px 8px rgba(10, 11, 13, 0.04);
+  --shadow-md: 0 2px 4px rgba(10, 11, 13, 0.04), 0 8px 24px rgba(10, 11, 13, 0.06);
+  --shadow-lg: 0 4px 8px rgba(10, 11, 13, 0.05), 0 24px 60px rgba(10, 11, 13, 0.10);
+  --shadow-glow: 0 10px 40px rgba(21, 137, 212, 0.20);
+
+  /* ===== Motion ========================================= */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);   /* default */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast:   120ms;
+  --t-base:   200ms;
+  --t-slow:   420ms;
+  --t-reveal: 700ms;
+}
+
+/* ----- Semantic element defaults ----------------------------
+   Apply these classes OR let the CSS cascade do the work. */
+
+html, body {
+  background: var(--bg2);
+  color: var(--fg2);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.display, h1.display {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg1);
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg1);
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-snug);
+  color: var(--fg1);
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: 1.25;
+  letter-spacing: var(--ls-snug);
+  color: var(--fg1);
+  font-weight: 500;
+}
+
+h4, .h4 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  line-height: 1.3;
+  color: var(--fg1);
+  font-weight: 500;
+}
+
+.lead {
+  font-size: var(--fs-lead);
+  line-height: var(--lh-body);
+  color: var(--fg2);
+  text-wrap: pretty;
+}
+
+p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg2);
+  text-wrap: pretty;
+}
+
+small, .caption {
+  font-size: var(--fs-caption);
+  color: var(--fg3);
+  line-height: 1.45;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--fg-accent);
+}
+
+code, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--bg3);
+  padding: 2px 6px;
+  border-radius: var(--r-xs);
+  color: var(--fg1);
+}
+
+/* Utility: blue gradient on text */
+.text-gradient {
+  background: var(--cr-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Utility: hairline separator */
+.hr {
+  height: 1px;
+  background: var(--border);
+  border: 0;
+}

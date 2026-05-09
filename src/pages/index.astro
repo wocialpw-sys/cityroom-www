@@ -1,0 +1,72 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Cityroom — zarządzanie najmem mieszkań w Poznaniu";
+const description =
+  "Cityroom Sp. z o.o. — zarządzanie najmem długoterminowym z gwarancją czynszu. Od 2017 roku w Poznaniu. 130 mieszkań, retention 95 %.";
+---
+
+<Base title={title} description={description} noindex={true}>
+  <main class="relative min-h-screen overflow-hidden bg-[var(--cr-paper)]">
+    <!-- Soft brand gradient blob, top-right (handoff §3 hero spec) -->
+    <div
+      class="pointer-events-none absolute top-0 right-0 h-[640px] w-[640px] -translate-y-1/3 translate-x-1/4 rounded-full opacity-[0.08]"
+      style="background: var(--cr-gradient-radial); filter: blur(60px);"
+      aria-hidden="true"
+    >
+    </div>
+
+    <header class="relative mx-auto flex max-w-[1200px] items-center justify-between px-6 pt-8 lg:px-12">
+      <a href="/" class="inline-flex items-center" aria-label="Cityroom — strona główna">
+        <img
+          src="/brand/logo.png"
+          alt="Cityroom"
+          height="24"
+          class="h-6 w-auto"
+        />
+      </a>
+      <span class="eyebrow">Stage · v0.0.1</span>
+    </header>
+
+    <section class="relative mx-auto max-w-[1200px] px-6 pt-16 pb-24 lg:px-12 lg:pt-24">
+      <p class="eyebrow mb-5">Dla właścicieli mieszkań</p>
+
+      <h1 class="display max-w-[18ch]">
+        Twoje mieszkanie pracuje. <span class="text-gradient">Ty odpoczywasz.</span>
+      </h1>
+
+      <p class="lead mt-7 max-w-[55ch]">
+        Prowadzimy Twój najem w Poznaniu — od pierwszego oglądania po comiesięczny przelew na Twoje konto.
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center gap-3">
+        <span class="eyebrow">Status projektu</span>
+      </div>
+
+      <ul class="mt-4 space-y-3 text-[var(--cr-ink-10)]">
+        <li class="flex items-start gap-3">
+          <img src="/brand/punktor.svg" alt="" class="mt-2 h-3 w-3 shrink-0" aria-hidden="true" />
+          <span>Stack zainstalowany — Astro 6 + Tailwind 4 + brand tokens.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <img src="/brand/punktor.svg" alt="" class="mt-2 h-3 w-3 shrink-0" aria-hidden="true" />
+          <span>Brand handoff w <code class="mono">docs/brand/</code> — tokens, fonty, ilustracje, reference implementation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <img src="/brand/punktor.svg" alt="" class="mt-2 h-3 w-3 shrink-0" aria-hidden="true" />
+          <span>Następny krok: sesja GEO/AEO — pillar + cluster mapa, intent map, content brief dla agenta AI.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <img src="/brand/punktor.svg" alt="" class="mt-2 h-3 w-3 shrink-0" aria-hidden="true" />
+          <span>Strona testowa pod <span class="mono">melawini.pl</span> — domena docelowa <span class="mono">cityroom.pl</span> po cutover.</span>
+        </li>
+      </ul>
+
+      <hr class="hr mt-16" />
+
+      <p class="mt-8 text-sm text-[var(--cr-ink-30)]">
+        To jest środowisko stage. Strona produkcyjna powstaje od maja 2026.
+      </p>
+    </section>
+  </main>
+</Base>
