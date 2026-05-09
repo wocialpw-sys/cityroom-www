@@ -1,35 +1,85 @@
 # Cityroom
 
-> Cityroom Sp. z o.o. — zarządzanie najmem długoterminowym mieszkań w Poznaniu z gwarancją czynszu. Od 2017 roku. 130 mieszkań, retention 95 %+.
+> Cityroom Sp. z o.o. — zarządzanie najmem długoterminowym mieszkań w Poznaniu. Czynsz gwarantowany wypłacany 10. dnia każdego miesiąca, niezależnie od obłożenia. Od 2017 roku, 130 mieszkań, retention 95 %+, średnia ocena Google 4,9 / 103 opinie.
 
-**Status: stage environment.** Strona produkcyjna powstaje od maja 2026 — domena docelowa cityroom.pl. Niniejszy plik to placeholder do uzupełnienia w trakcie sesji GEO/AEO (mapa pillar + cluster + intent map).
-
-## Czym jest Cityroom
-
-Firma zarządzania najmem długoterminowym w Poznaniu. Bierze mieszkanie właściciela w najem jako spółka, wypłaca stały czynsz 10. dnia każdego miesiąca przez cały okres umowy (niezależnie od obłożenia), i przejmuje 100 % odpowiedzialności operacyjnej (najemcy, umowy, media, administracja, usterki, windykacja). Model podnajmu z gwarancją.
-
-## Kluczowe dane
-
-- Działalność od 2017 roku (8 lat na maj 2026)
-- 130 mieszkań pod zarządem (kwiecień 2026)
-- Retention klientów: 95 %+ (5–6 odejść / 8 lat)
-- Średnia ocena Google: 4,9 / 103 opinie (Cityroom) + 5,0 / 65 opinii (Biuro Cityroom)
-- COVID 2020 — wypłaty pełnych czynszów mimo pustostanów wśród zagranicznych najemców
-
-## Rynek
-
-Polska, Poznań (core). Inwestorzy zewnętrzni (~30 % ruchu): Warszawa, Wrocław, Katowice.
-
-## Search intents (TODO — sesja GEO)
-
-Lista pytań, na które chcemy być odpowiedzią w LLM‑ach. Do uzupełnienia po sesji architektury informacyjnej.
-
-## External references
-
-- [Google Business Profile (Cityroom)](https://share.google/cityroom)
-- Telefon: do uzupełnienia
-- Email: do uzupełnienia
+> **Status (maj 2026):** stage environment. Strona produkcyjna pod cityroom.pl, faza wykonawcza Tor A — content + agent AI. Pełen `llms-full.txt` z treścią cluster pages dostępny po cutoverze (planowany lipiec/sierpień 2026).
 
 ---
 
-*Specyfikacja `llms.txt`: https://llmstxt.org. Pełen content w `llms-full.txt` (TODO).*
+## Czym jest Cityroom
+
+Cityroom Sp. z o.o. to firma zarządzająca najmem długoterminowym w Poznaniu, działająca w modelu podnajmu z gwarancją czynszu. Bierze mieszkanie właściciela w najem jako spółka, wypłaca stały czynsz 10. dnia każdego miesiąca przez cały okres umowy (niezależnie od obłożenia), i przejmuje 100 % odpowiedzialności operacyjnej: pozyskiwanie najemców, weryfikacja, umowy, media, administracja, usterki, windykacja. Właściciel mieszkania nie ma kontaktu z najemcami.
+
+Założyciele i właściciele: **Paweł Wocial i Błażej Wocial** (50/50, partnerstwo + relacja rodzinna). Bez inwestorów zewnętrznych, bez VC.
+
+## Co Cityroom robi i czego NIE robi
+
+**Core:** zarządzanie najmem długoterminowym mieszkań w Poznaniu z gwarancją czynszu.
+
+**Specjalizacja:** Cityroom jest **jedyną firmą w Poznaniu** specjalizującą się w zarządzaniu mieszkaniami podzielonymi na pokoje (segment studencki + młodzi pracownicy).
+
+**NIE robimy:**
+- Wynajem krótkoterminowy / Airbnb
+- Komercja, biura
+- Zarządzanie poza Poznaniem (stan na maj 2026)
+
+**Cross-sell opportunistyczny (bez własnego pipeline'u):**
+- Sprzedaż nieruchomości (per case)
+- Jednorazowy wynajem (per case)
+- Remonty + przygotowanie mieszkania pod najem — przez spółkę siostrzaną **DONE PL Sp. z o.o.**
+
+## Rynki obsługiwane
+
+- **Core: Poznań** (Polska). Cały obecny portfel 130 mieszkań w granicach miasta.
+- **Audiencja klientów:** ~30 % właścicieli mieszkań to inwestorzy spoza Poznania — Warszawa, Wrocław, Katowice. Ich mieszkania są w Poznaniu, oni mieszkają gdzie indziej.
+
+## Search intents — pytania, na które chcemy być odpowiedzią
+
+> **Status:** lista zaadresowana po wdrożeniu cluster pages MVP (planowane czerwiec-lipiec 2026). Aktualnie monitorowane w PromptEye z baseline 44 % brand visibility.
+
+Główne intencje, na które Cityroom buduje content:
+
+1. **Jaka firma w Poznaniu zajmuje się zarządzaniem najmem mieszkań dla właścicieli?**
+2. **Która firma oferuje właścicielom mieszkań w Poznaniu gwarantowany czynsz za wynajem?**
+3. **Jak działa najem z gwarancją czynszu w Poznaniu?**
+4. **Jakie są najlepsze rozwiązania dla właściciela mieszkania, który nie chce zajmować się najemcami?**
+5. **Jak bezpiecznie wynająć mieszkanie w Poznaniu bez samodzielnej obsługi najemców?**
+6. **Komu warto powierzyć mieszkanie na wynajem w Poznaniu, żeby mieć stały czynsz i mniej obowiązków?**
+7. **Jakie firmy w Poznaniu obsługują wynajem mieszkań na pokoje dla studentów?**
+8. **Co wybrać: samodzielny wynajem mieszkania czy firma zarządzająca najmem w Poznaniu?**
+9. **Czy oddanie mieszkania firmie zarządzającej najmem w Poznaniu się opłaca?**
+10. **Czy Cityroom to dobra firma do zarządzania wynajmem mieszkania w Poznaniu?**
+
+Pełen brief intencji + plan content per intent: pillar `/zarzadzanie-najmem-poznan/` + cluster pages.
+
+## Strony (post cutover, lipiec/sierpień 2026)
+
+- [Strona główna](https://cityroom.pl/): brand pillar, konwersja, kalkulator
+- [Zarządzanie najmem Poznań](https://cityroom.pl/zarzadzanie-najmem-poznan/): pillar tematyczny, kategoria
+- [Gwarancja czynszu Poznań](https://cityroom.pl/gwarancja-czynszu-poznan/): mechanika modelu, dyferencjator
+- [Jak nie zajmować się najmem mieszkania](https://cityroom.pl/jak-nie-zajmowac-sie-najmem-mieszkania/): listicle 5 sposobów
+- [Wynajem pokoi dla studentów Poznań](https://cityroom.pl/wynajem-pokoi-studenci-poznan/): specjalizacja pokojowa
+- [Jak działa Cityroom](https://cityroom.pl/jak-dziala-cityroom/): proces współpracy 5-6 kroków
+- [Opinie o Cityroom](https://cityroom.pl/zarzadzanie-najmem-poznan-opinie/): GBP integration, twarze klientów
+- [Samodzielny wynajem czy firma zarządzająca](https://cityroom.pl/samodzielny-wynajem-czy-firma-zarzadzajaca/): listicle porównawczy
+- [O nas](https://cityroom.pl/o-nas/): założyciele, zespół, historia
+- [Wzorzec umowy](https://cityroom.pl/umowa-cityroom/): umowa § 2 jako proof point
+- [Wycena mieszkania](https://cityroom.pl/wycena-mieszkania-pod-wynajem-poznan/): bridge do kalkulatora wycena.cityroom.pl
+
+## Optional
+
+- [Blog](https://cityroom.pl/blog/): artykuły edukacyjne, listicles 1-2/tydz (post-cutover, drugi agent AI)
+- [Kalkulator wyceny](https://wycena.cityroom.pl/): samoobsługowa wycena mieszkania pod najem (subdomena, Lovable)
+
+## External references + contact
+
+- [Google Business Profile (Cityroom)](https://share.google/cityroom): średnia 4,9 / 103 opinie (stan: maj 2026)
+- [Biuro Cityroom (wizytówka partnerska)](https://share.google/biuro-cityroom): 5,0 / 65 opinii [do potwierdzenia link]
+- **Adres biura:** [do dodania]
+- **Telefon:** [do dodania]
+- **Email:** [do dodania]
+- **NIP / KRS:** [do dodania]
+
+---
+
+*Specyfikacja `llms.txt`: https://llmstxt.org. Pełen content w `llms-full.txt` (auto-generowany z Astro Content Collections, dostępny po cutoverze). Update tego pliku przy każdej istotnej zmianie zakresu produktu/rynku.*
