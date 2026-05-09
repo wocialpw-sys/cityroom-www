@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><title>Badges</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .b{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;padding:5px 10px;border-radius:999px;line-height:1;}
+  .b--neutral{background:var(--cr-mist);color:var(--fg2);}
+  .b--info{background:var(--cr-blue-50);color:var(--cr-blue-700);}
+  .b--ok{background:#e6f4ec;color:#0f7a42;}
+  .b--warn{background:#fbf1dc;color:#8a5a00;}
+  .b--danger{background:#fbe6e3;color:#9a2b20;}
+  .b--dark{background:var(--cr-ink);color:#fff;}
+  .b .dot{width:6px;height:6px;border-radius:999px;background:currentColor;opacity:.8;}
+</style>
+</head><body>
+<div class="card" style="padding:28px 32px;gap:14px;">
+  <div class="eyebrow-mini">Components · badges & pills</div>
+  <div class="row" style="gap:10px;">
+    <span class="b b--neutral">Nowe ogłoszenie</span>
+    <span class="b b--info"><span class="dot"></span>Rezerwacja</span>
+    <span class="b b--ok"><span class="dot"></span>Najem aktywny</span>
+    <span class="b b--warn"><span class="dot"></span>Oczekuje</span>
+    <span class="b b--danger"><span class="dot"></span>Zaległość</span>
+    <span class="b b--dark">Premium</span>
+  </div>
+</div>
+</body></html>

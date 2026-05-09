@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:500;font-size:15px;padding:12px 20px;border-radius:10px;border:0;cursor:pointer;letter-spacing:0;line-height:1;transition:all .2s var(--ease-out);}
+  .btn--primary{background:var(--cr-ink);color:#fff;}
+  .btn--primary:hover{background:#1a1c20;}
+  .btn--accent{background:var(--cr-gradient);color:#fff;box-shadow:var(--shadow-glow);}
+  .btn--ghost{background:transparent;color:var(--fg1);border:1px solid var(--border-strong);}
+  .btn--ghost:hover{background:var(--cr-mist);}
+  .btn--link{background:transparent;color:var(--cr-blue-600);padding:10px 4px;}
+  .btn--link:hover{color:var(--cr-blue-700);}
+</style>
+</head><body>
+<div class="card" style="padding:28px 32px;gap:18px;">
+  <div class="eyebrow-mini">Components · buttons</div>
+  <div class="row" style="gap:12px;">
+    <button class="btn btn--primary">Umów spokojną rozmowę</button>
+    <button class="btn btn--accent">Zacznij wycenę</button>
+  </div>
+  <div class="row" style="gap:12px;align-items:center;">
+    <button class="btn btn--ghost">Zobacz więcej</button>
+    <button class="btn btn--link">Przeczytaj raport →</button>
+  </div>
+</div>
+</body></html>

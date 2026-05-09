@@ -1,0 +1,59 @@
+/* Preview cards — shared styles for Design System tab.
+   Each card file links this + ../colors_and_type.css. */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: var(--fg1);
+  font-family: var(--font-body);
+}
+
+.card {
+  box-sizing: border-box;
+  width: 700px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #ffffff;
+}
+
+.card--mist { background: var(--cr-mist); }
+.card--paper { background: var(--cr-paper); }
+
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.row--tight { gap: 6px; }
+.row--wide { gap: 20px; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+.stack-8 { display: flex; flex-direction: column; gap: 8px; }
+.grow { flex: 1; }
+
+.swatch {
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 88px;
+}
+.swatch__name { font-size: 11px; color: var(--fg1); font-weight: 600; letter-spacing: 0; }
+.swatch__hex  { font-size: 11px; color: var(--fg3); font-family: var(--font-mono); }
+.swatch--dark .swatch__name { color: #fff; }
+.swatch--dark .swatch__hex { color: rgba(255,255,255,0.7); }
+
+.kv { display: flex; align-items: baseline; gap: 12px; font-family: var(--font-mono); font-size: 12px; color: var(--fg3); }
+.kv b { color: var(--fg1); font-weight: 500; }
+
+.specimen { color: var(--fg1); }
+.specimen--muted { color: var(--fg3); }
+
+.eyebrow-mini {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg3);
+  font-weight: 600;
+}

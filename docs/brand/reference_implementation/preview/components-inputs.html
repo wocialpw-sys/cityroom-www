@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><title>Inputs</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field label{font-size:13px;color:var(--fg2);font-weight:500;}
+  .inp{font-family:var(--font-body);font-size:15px;padding:12px 14px;border:1px solid var(--border-strong);border-radius:8px;background:#fff;color:var(--fg1);outline:none;transition:border-color .15s, box-shadow .15s;}
+  .inp::placeholder{color:var(--fg4);}
+  .inp:focus{border-color:var(--cr-blue-400);box-shadow:0 0 0 4px rgba(46,176,230,0.15);}
+</style>
+</head><body>
+<div class="card" style="padding:28px 32px;gap:14px;">
+  <div class="eyebrow-mini">Components · inputs</div>
+  <div class="row" style="gap:14px;align-items:flex-end;">
+    <div class="field" style="flex:1;">
+      <label>Adres mieszkania</label>
+      <input class="inp" placeholder="ul. Święty Marcin 58, Poznań" />
+    </div>
+    <div class="field" style="width:150px;">
+      <label>Metraż</label>
+      <input class="inp" value="42 m²" />
+    </div>
+  </div>
+  <div class="row" style="gap:14px;">
+    <div class="field" style="flex:1;">
+      <label>Telefon</label>
+      <input class="inp" value="+48 600 000 000" />
+    </div>
+    <div class="field" style="flex:1;">
+      <label>E-mail</label>
+      <input class="inp" placeholder="anna@example.pl" />
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><title>Semantic colors</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .el-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .el {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 14px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    transition: border-color .2s;
+  }
+  .el:hover { border-color: var(--border-strong); }
+
+  .el__head {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .el__badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11.5px; font-weight: 500; line-height: 1;
+    padding: 5px 9px 5px 7px;
+    border-radius: 999px;
+  }
+  .el__badge .dot {
+    width: 6px; height: 6px; border-radius: 999px;
+    background: currentColor;
+  }
+  .el__hex {
+    font-family: var(--font-mono); font-size: 10.5px;
+    color: var(--fg4); letter-spacing: 0;
+  }
+
+  .el__name {
+    font-family: var(--font-display); font-size: 15px; font-weight: 500;
+    color: var(--fg1); letter-spacing: -0.005em; line-height: 1.2;
+  }
+  .el__sub {
+    font-size: 11.5px; color: var(--fg3); line-height: 1.4;
+    margin-top: 2px;
+  }
+
+  /* Thin color accent strip — ElevenLabs-style restrained mark */
+  .el__strip {
+    height: 3px;
+    border-radius: 2px;
+    margin-top: 2px;
+  }
+
+  /* Info */
+  .el--info .el__badge { background: #eaf4ff; color: #0b5ea8; }
+  .el--info .el__strip { background: linear-gradient(90deg, #2eb0e6, #0773cb); }
+
+  /* Ok */
+  .el--ok .el__badge { background: #e8f5ec; color: #136b3c; }
+  .el--ok .el__strip { background: linear-gradient(90deg, #4ac17a, #0f7a42); }
+
+  /* Warn */
+  .el--warn .el__badge { background: #fbf1dc; color: #7a4a00; }
+  .el--warn .el__strip { background: linear-gradient(90deg, #f5b84a, #a66300); }
+
+  /* Danger */
+  .el--danger .el__badge { background: #fbeae7; color: #8a2318; }
+  .el--danger .el__strip { background: linear-gradient(90deg, #ef8076, #a8281c); }
+
+  .el-foot {
+    display: flex; justify-content: space-between;
+    font-family: var(--font-mono); font-size: 10.5px;
+    color: var(--fg4); padding-top: 2px;
+  }
+  .el-foot b { color: var(--fg2); font-weight: 500; }
+</style>
+</head><body>
+<div class="card" style="gap:14px;padding:26px 32px;">
+  <div class="row" style="justify-content:space-between;align-items:baseline;">
+    <div class="eyebrow-mini">Color · semantic state</div>
+    <div style="font-family:var(--font-mono);font-size:10.5px;color:var(--fg4);">tonal badge + accent strip</div>
+  </div>
+
+  <div class="el-grid">
+    <div class="el el--info">
+      <div class="el__head">
+        <span class="el__badge"><span class="dot"></span>Info</span>
+        <span class="el__hex">#0773cb</span>
+      </div>
+      <div>
+        <div class="el__name">Rezerwacja</div>
+        <div class="el__sub">Najemca potwierdził oglądanie.</div>
+        <div class="el__strip"></div>
+      </div>
+    </div>
+
+    <div class="el el--ok">
+      <div class="el__head">
+        <span class="el__badge"><span class="dot"></span>Ok</span>
+        <span class="el__hex">#0f7a42</span>
+      </div>
+      <div>
+        <div class="el__name">Najem aktywny</div>
+        <div class="el__sub">Czynsz zaksięgowany w terminie.</div>
+        <div class="el__strip"></div>
+      </div>
+    </div>
+
+    <div class="el el--warn">
+      <div class="el__head">
+        <span class="el__badge"><span class="dot"></span>Warn</span>
+        <span class="el__hex">#a66300</span>
+      </div>
+      <div>
+        <div class="el__name">Oczekuje</div>
+        <div class="el__sub">Brak podpisu najemcy — 2 dni.</div>
+        <div class="el__strip"></div>
+      </div>
+    </div>
+
+    <div class="el el--danger">
+      <div class="el__head">
+        <span class="el__badge"><span class="dot"></span>Danger</span>
+        <span class="el__hex">#a8281c</span>
+      </div>
+      <div>
+        <div class="el__name">Zaległość</div>
+        <div class="el__sub">Czynsz spóźniony o 5 dni.</div>
+        <div class="el__strip"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="el-foot">
+    <span><b>Tonal badge</b> soft bg + strong fg</span>
+    <span><b>Accent strip</b> 3px gradient rule</span>
+    <span>restraint · one status per row</span>
+  </div>
+</div>
+</body></html>

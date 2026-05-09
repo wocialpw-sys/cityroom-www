@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><title>Nav</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .nav{background:rgba(255,255,255,0.72);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:16px;padding:14px 22px;display:flex;align-items:center;gap:28px;box-shadow:var(--shadow-sm);}
+  .nav__logo{font-family:var(--font-display);font-weight:600;letter-spacing:-0.01em;font-size:20px;color:var(--fg1);display:flex;align-items:center;gap:8px;}
+  .nav__logo img{height:22px;width:auto;}
+  .nav a{color:var(--fg2);text-decoration:none;font-size:14px;font-weight:500;transition:opacity .15s;}
+  .nav a:hover{opacity:.7;}
+  .nav__cta{margin-left:auto;background:var(--cr-ink);color:#fff;padding:9px 16px;border-radius:8px;font-size:13px;font-weight:500;}
+</style>
+</head><body>
+<div class="card card--paper" style="padding:28px;gap:12px;">
+  <div class="eyebrow-mini">Components · top nav</div>
+  <div class="nav">
+    <div class="nav__logo"><img src="../assets/logo-cityroom-black.png" alt="">Cityroom</div>
+    <a href="#">Jak to działa</a>
+    <a href="#">Oferta</a>
+    <a href="#">Dla właścicieli</a>
+    <a href="#">Kontakt</a>
+    <a href="#" class="nav__cta">Umów rozmowę</a>
+  </div>
+</div>
+</body></html>

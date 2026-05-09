@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><title>Cards</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  .c{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:8px;}
+  .c--elev{border:0;box-shadow:var(--shadow-md);}
+  .c h4{margin:0;}
+  .c p{margin:0;font-size:14px;color:var(--fg3);line-height:1.5;}
+  .mark{height:18px;width:24px;background:var(--cr-gradient);clip-path:polygon(30% 0, 100% 0, 70% 100%, 0 100%);margin-bottom:6px;}
+</style>
+</head><body>
+<div class="card card--paper" style="padding:32px;gap:16px;">
+  <div class="eyebrow-mini">Components · cards</div>
+  <div class="row" style="gap:16px;align-items:stretch;">
+    <div class="c" style="flex:1;">
+      <div class="mark"></div>
+      <h4>Umowa okazjonalna</h4>
+      <p>Pełna ochrona właściciela, zgodna z ustawą.</p>
+    </div>
+    <div class="c c--elev" style="flex:1;">
+      <h4>Comiesięczny raport</h4>
+      <p>Wpływy, koszty, salda najemców — w jednym PDF-ie.</p>
+    </div>
+  </div>
+</div>
+</body></html>
